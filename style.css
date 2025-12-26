@@ -296,5 +296,34 @@ footer {
     width: 60px;
   }
 }
+/* =====================
+   FORCE CORNER LOGO
+===================== */
+.site-header {
+  position: relative;
+  min-height: 70px;
+  padding-top: 30px;
+}
+
+.logo-link {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2000;
+}
+
+.corner-logo {
+  width: 42px;
+  height: auto;
+  display: block;
+}
+
+/* Mobile size */
+@media (max-width: 768px) {
+  .corner-logo {
+    width: 34px;
+  }
+}
+
 
 
