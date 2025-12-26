@@ -1,1 +1,237 @@
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff5f8;
+  color: #5a2a2a;
+  line-height: 1.6;
+}
+
+/* =====================
+   HEADER & NAVIGATION
+===================== */
+header {
+  background: #f7b2cc;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+header p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+nav {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5a2a2a;
+  font-size: 16px;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  background: #ffe1ec;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 30px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  background: #f48fb1;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* =====================
+   MENU GRID
+===================== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 0 15px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+/* =====================
+   ORDER FORM
+===================== */
+form {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input,
+textarea,
+select {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+form button {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 25px;
+  background: #f48fb1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #f7b2cc;
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* =====================
+   STICKY ORDER BUTTON (MOBILE)
+===================== */
+.sticky-order-btn {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f48fb1;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+/* =====================
+   BAKING MASCOT
+===================== */
+.mascot {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+  background: white;
+  border-radius: 20px;
+  padding: 10px 14px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  font-size: 22px;
+  animation: bounce 2s infinite;
+  z-index: 1000;
+}
+
+.mascot span {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #f48fb1;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =====================
+   MOBILE MEDIA QUERY
+===================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 26px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .sticky-order-btn {
+    display: block;
+  }
+
+  .mascot {
+    display: block;
+  }
+}
 
