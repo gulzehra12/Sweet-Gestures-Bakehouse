@@ -1,17 +1,20 @@
-/* ============================
-   SMOOTH SCROLL FOR ANCHOR LINKS
-============================ */
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href');
-    const target = document.querySelector(targetId);
+// Show sticky button after scrolling 300px
+const stickyBtn = document.querySelector('.sticky-order-btn');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 300) {
+    stickyBtn.style.display = 'block';
+  } else {
+    stickyBtn.style.display = 'none';
+  }
+});
 
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+// Smooth scrolling for all links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
   });
 });
 
