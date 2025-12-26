@@ -97,6 +97,20 @@ nav a {
 /* =====================
    HERO SECTION
 ===================== */
+.hero-logo {
+  width: 100px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  padding: 4px;
+
+  /* Make background appear transparent */
+  background: transparent;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
 .hero {
   background: #ffe1ec;
   padding: 60px 20px;
