@@ -59,19 +59,42 @@
    ORDER SECTION
 ===================== -->
 <section id="order">
-  <h2>Place Your Order</h2>
-  <form action="https://formsubmit.co/sweetgesturesbakehouse" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Customer Email" required>
-  <input type="tel" name="phone" placeholder="Phone Number" required>
-  <textarea name="order" placeholder="Order details" required></textarea>
+  <h2>Place Your Order 🧁</h2>
 
-  <!-- Optional settings -->
-  <input type="hidden" name="_subject" value="🧁 New Bakery Order">
-  <input type="hidden" name="_captcha" value="false">
+  <form
+    action="https://formsubmit.co/sweetgesturesbakehouse"
+    method="POST"
+  >
+    <!-- Customer Info -->
+    <input type="text" name="Name" placeholder="Your Name" required>
+    <input type="email" name="Email" placeholder="Your Email" required>
+    <input type="tel" name="Phone" placeholder="Phone Number" required>
 
-  <button type="submit">Submit Order 🧁</button>
-</form>
+    <!-- Order Details -->
+    <textarea name="Order Details" placeholder="What would you like to order?" required></textarea>
+
+    <!-- Pickup Date & Time -->
+    <label>Pickup Date</label>
+    <input type="date" name="Pickup Date" required>
+
+    <label>Pickup Time</label>
+    <input type="time" name="Pickup Time" required>
+
+    <!-- Pickup Method -->
+    <label>Pickup Method</label>
+    <select name="Pickup Method" required>
+      <option value="">Select an option</option>
+      <option value="In-store pickup">In-store Pickup</option>
+      <option value="Curbside pickup">Curbside Pickup</option>
+    </select>
+
+    <!-- FormSubmit Settings -->
+    <input type="hidden" name="_subject" value="🧁 New Bakery Order">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="thankyou.html">
+
+   <button type="submit" onclick="showThankYouPopup()">Submit Order 🧁</button>
+  </form>
 </section>
 
 <!-- =====================
@@ -107,6 +130,16 @@
    CUTE MASCOT
 ===================== -->
 <div class="mascot">🐱🧁<span>Freshly baked!</span></div>
+
+  <!-- THANK YOU POPUP -->
+<div id="thankYouPopup" class="popup-overlay">
+  <div class="popup-box">
+    <h2>Thank You! 💖</h2>
+    <p>Your order has been sent successfully.</p>
+    <p>We’ll contact you soon to confirm pickup details 🧁</p>
+    <button onclick="closePopup()">Okay 🍰</button>
+  </div>
+</div>
 
 </body>
 </html>
