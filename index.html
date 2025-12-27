@@ -11,15 +11,26 @@
   <!-- HERO SECTION -->
 <header id="hero">
   <div class="hero-content">
+
+    <!-- Logo + Name -->
     <div class="logo-name">
-      <img src="logo.png.jpg" alt="Sweet Gesture Bakehouse Logo" class="logo">
+      <img src="images/logo.jpg" alt="Sweet Gesture Bakehouse Logo" class="logo">
       <h1>Sweet Gesture Bakehouse</h1>
     </div>
-    <p>Located in Frisco, TX</p>
-    <a href="#contact" class="hero-button">Contact Us 🧁</a>
-    <a href="sweetgesturesbakehouse@gmail.com" class="hero-button email-button">📧 Send Us an Email</a>
+
+    <p class="location">Located in Frisco, TX</p>
+
+    <!-- Buttons at the END -->
+    <div class="hero-buttons">
+      <a href="#contact" class="hero-button">Contact Us 🧁</a>
+      <a href="mailto:sweetgesturesbakehouse@gmail.com" class="hero-button email-button">
+        📧 Send Us an Email
+      </a>
+    </div>
+
   </div>
 </header>
+
 
   <!-- GALLERY SECTION -->
   <section id="gallery">
@@ -43,8 +54,8 @@
 
   <!-- ORDER / CONTACT SECTION -->
   <section id="contact">
-    <h2>Place Your Order 🧁</h2>
-    <form id="orderForm" action="https://formsubmit.co/youremail@example.com" method="POST">
+    <h2>Tell us what you want 🧁</h2>
+    <form id="orderForm" action="https://formsubmit.co/sweetgesturesbakehouse@gmail.com" method="POST">
 
       <label>Name</label>
       <input type="text" name="Name" placeholder="Your Name" required>
@@ -69,7 +80,7 @@
       <label>Message</label>
       <textarea name="Message" placeholder="Any special requests?" rows="3"></textarea>
 
-      <button type="submit" class="hero-button">Contant us 🧁</button>
+      <button type="submit" class="hero-button">Contant Us 🧁</button>
       <input type="hidden" name="_next" value="thankyou.html">
 
     </form>
