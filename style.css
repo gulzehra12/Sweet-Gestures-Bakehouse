@@ -146,10 +146,66 @@ h1, h2 {
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 600px) {
-  #hero h1 { font-size: 36px; }
-  #hero p { font-size: 16px; }
-  .hero-button, .email-button { width: 100%; padding: 15px 0; }
+  h1 {
+    font-size: 34px;
+  }
+
+  .hero-button {
+    width: 100%;
+    padding: 15px 0;
+  }
 }
+
+#hero {
+  min-height: 100vh; /* full screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffdde1, #ff4d6d);
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* PUSH BUTTONS DOWN */
+  padding: 40px 20px;
+}
+
+/* BUTTONS AT END */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hero-button {
+  background: #ff4d6d;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255,77,109,0.4);
+}
+
+.email-button {
+  background: white;
+  color: #ff4d6d;
+}
+
+
 
 
 
