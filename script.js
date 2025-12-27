@@ -94,3 +94,12 @@ document.addEventListener(
   false
 );
 
+function showThankYouPopup() {
+  document.getElementById("thankYouPopup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("thankYouPopup").style.display = "none";
+}
+
+
