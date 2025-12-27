@@ -15,12 +15,6 @@
   <p class="hero-subtitle">Handmade Desserts • Fresh Daily • Made with Love 💖</p>
 </section>
 
-  <!-- Baking Mascot -->
-<div class="mascot">
-  🐱🧁
-  <span>Freshly baked!</span>
-</div>
-
   <!-- =====================
    MENU SECTION
 ===================== -->
@@ -121,36 +115,48 @@
     </div>
   </div>
 
-  <!-- =====================
-   CONTACT SECTION
-===================== -->
+ <!-- CONTACT + FOLLOW SECTION -->
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: sweetgesturesbakehouse@gmail.com</p>
-  <p>Follow us on Instagram: @sweetgesturesbakehouse</p>
-  <p>Follow us on Facebook: @sweetgestsuresbakehouse</p>
-</section>
+  <h2>Contact & Follow Us 🧁</h2>
 
-  <section id="map-section">
-  <h2>Find Us</h2>
-  <div class="map-container">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13453.123456789!2d-96.823611!3d33.150681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c29b123456789%3A0xabcdef123456789!2sFrisco%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-      width="100%" 
-      height="300" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+  <form action="https://formsubmit.co/sweetgesturesbakehouse@gmail.com" method="POST">
+    <label>Name</label>
+    <input type="text" name="Name" required>
+
+    <label>Email</label>
+    <input type="email" name="Email" required>
+
+    <label>Message</label>
+    <textarea name="Message" rows="3"></textarea>
+
+    <button type="submit" class="hero-button">Send an Email 🧁</button>
+
+    <input type="hidden" name="_captcha" value="false">
+  </form>
+
+  <div class="contact-buttons">
+    <a href="https://www.instagram.com/sweetgesturesbakehouse" target="_blank" class="contact-btn">
+      📷 Follow us on Instagram
+    </a>
+
+    <a href="https://www.facebook.com/sweetgesturesbakehouse" target="_blank" class="contact-btn facebook-btn">
+      👍 Follow us on Facebook
+    </a>
   </div>
 </section>
 
-  <!-- =====================
-   CUTE MASCOT
-===================== -->
-<div class="mascot">🐱🧁<span>Freshly baked!</span></div>
-
+<!-- MAP (LAST SECTION) -->
+<section id="map-section">
+  <h2>Find Us</h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=Frisco,TX&output=embed"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+  
   <script src="script.js"></script>
 </body>
 </html>
