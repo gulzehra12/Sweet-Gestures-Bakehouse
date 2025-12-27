@@ -119,6 +119,41 @@ orderMethod.addEventListener("change", () => {
   }
 });
 
+  #deliveryAddress input {
+  margin-top: 10px;
+}
+
+.delivery-fee {
+  display: none;
+  background: #fff3f6;
+  border: 2px dashed #ff4d6d;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 10px;
+  color: #5a1a1a;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+  // Show thank-you popup after form submission
+orderForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(orderForm);
+  fetch(orderForm.action, {
+    method: orderForm.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    thankYouPopup.style.display = "block";
+    orderForm.reset();
+  }).catch(error => {
+    alert("Oops! Something went wrong. Please try emailing us directly.");
+  });
+});
+
 #deliveryAddress input {
   margin-top: 10px;
 }
