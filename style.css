@@ -1,365 +1,107 @@
-/* =====================
-   GLOBAL RESET
-===================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* ===================== GENERAL ===================== */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #fff0f5;
-  color: #4a1c1c;
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #fff0f6;
+  color: #333;
 }
 
-/* =====================
-   FULLSCREEN HERO
-===================== */
-.hero-fullscreen {
-  position: relative;
-  background: url('images/bakery-bg.jpg') no-repeat center center/cover;
-  height: 100vh;
+.logo-name {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 15px; /* space between logo and text */
+}
+
+.logo {
+  height: 80px; /* adjust size as needed */
+  width: auto;
+}
+
+h1, h2 {
+  color: #ff3366;
   text-align: center;
-  color: white;
-  padding: 20px;
 }
 
-.hero-button {
-  background: #ff4d6d;        /* vibrant pink */
+/* ===================== HERO ===================== */
+#hero {
+  background: linear-gradient(135deg, #ffdde1, #ff4d6d);
   color: white;
-  border: none;
-  padding: 15px 40px;         /* more padding makes it bigger */
-  font-size: 18px;             /* bigger text */
-  border-radius: 30px;         /* rounded corners */
-  cursor: pointer;
-  display: inline-block;       /* ensures width adjusts */
+  padding: 80px 20px;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  min-width: 180px;            /* ensures button isn’t too short */
 }
 
-.hero-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+#hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
-
-.hero-fullscreen::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(255, 77, 102, 0.4); /* Vibrant pink overlay */
-  z-index: 1;
-}
-
-.hero-logo {
-  width: 100px;
-  height: auto;
-  position: relative;
-  z-index: 2;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  background: transparent; /* Transparent logo background */
-  padding: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.hero-title {
-  font-size: 60px;
-  font-weight: bold;
-  color: #fffdfd;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-  position: relative;
-  z-index: 2;
-  margin-bottom: 15px;
-}
-
-.hero-subtitle {
-  font-size: 22px;
-  position: relative;
-  z-index: 2;
+#hero p {
+  font-size: 18px;
   margin-bottom: 25px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
-.hero-button {
-  .email-button {
-  background: #ff4d6d; /* pink vibrant color */
+/* HERO BUTTONS */
+.hero-button, .email-button {
+  background: #ff4d6d;
   color: white;
   text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
   display: inline-block;
-  margin-top: 10px;
+  margin: 10px 10px 0 10px;
+  cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  min-width: 180px;
 }
 
-.email-button:hover {
+.hero-button:hover, .email-button:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(255,77,109,0.4);
 }
 
+/* ===================== GALLERY ===================== */
+#gallery {
+  padding: 50px 20px;
 }
 
-.hero-button:hover {
-  transform: scale(1.05);
-  background: #ff1a4d;
-}
-
-/* =====================
-   MENU SECTION
-===================== */
-#menu {
-  padding: 60px 20px;
-  background: #ffe1ec;
-  text-align: center;
-}
-
-.menu-grid {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.card {
-  background: #fff0f5;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* =====================
-   ABOUT SECTION
-===================== */
-#about {
-  padding: 60px 20px;
-  background: #ffdee9;
-  text-align: center;
-}
-
-/* =====================
-   ORDER SECTION
-===================== */
-#order {
-  padding: 60px 20px;
-  background: #ffe1ec;
-  text-align: center;
-}
-
-#order form {
-  display: flex;
-  flex-direction: column;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 15px;
-  max-width: 400px;
-  margin: auto;
 }
 
-#order input, #order textarea, #order button {
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-#order button {
-  background: #ff3366;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.2s;
-}
-
-#order button:hover {
-  transform: scale(1.05);
-}
-
-/* =====================
-   CONTACT SECTION
-===================== */
-#contact {
-  padding: 60px 20px;
-  background: #ffdee9;
-  text-align: center;
-}
-
-.map-container {
-  margin-top: 15px;
-  width: 100%;
-  height: 300px;
-  border-radius: 15px;
+.gallery-item {
   overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* =====================
-   STICKY ORDER BUTTON
-===================== */
-.sticky-order-btn {
-  display: none;
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ff3366;
-  color: white;
-  padding: 16px 28px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.25);
-  z-index: 1000;
-  transition: transform 0.2s;
-}
-
-.sticky-order-btn:hover {
-  transform: scale(1.05);
-}
-
-/* =====================
-   MASCOT
-===================== */
-.mascot {
-  display: none;
-  position: fixed;
-  bottom: 90px;
-  right: 15px;
-  background: #fff0f5;
-  border-radius: 20px;
-  padding: 10px 14px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-  font-size: 22px;
-  animation: bounce 2s infinite;
-  z-index: 1000;
-}
-
-.mascot span {
-  display: block;
-  font-size: 12px;
-  margin-top: 4px;
-  color: #ff3366;
-  font-weight: bold;
-  text-align: center;
-}
-
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-/* =====================
-   MOBILE RESPONSIVE
-===================== */
-@media (max-width: 768px) {
-  .hero-logo {
-    width: 70px;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-subtitle {
-    font-size: 16px;
-  }
-  .hero-button {
-    padding: 12px 28px;
-    font-size: 16px;
-  }
-  .sticky-order-btn {
-    display: block;
-  }
-  .mascot {
-    display: block;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =====================
-   POPUP STYLES
-===================== */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.gallery-item img {
   width: 100%;
   height: 100%;
-  background: rgba(255, 182, 193, 0.6);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  object-fit: cover;
 }
 
-.popup-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 320px;
-  width: 90%;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  animation: popUp 0.3s ease;
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
 }
 
-.popup-box h2 {
-  color: #ff4d6d;
-  font-size: 26px;
-  margin-bottom: 10px;
+/* ===================== ORDER FORM ===================== */
+#contact {
+  padding: 50px 20px;
 }
 
-.popup-box p {
-  color: #5a1a1a;
-  font-size: 16px;
+#contact input, #contact select, #contact textarea, #contact button {
+  width: 100%;
   margin-bottom: 15px;
-}
-
-.popup-box button {
-  background: #ff4d6d;
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 25px;
   font-size: 16px;
-  cursor: pointer;
-}
-
-@keyframes popUp {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.delivery-fee {
-  display: none;
-  background: #fff3f6;
-  border: 2px dashed #ff4d6d;
   padding: 12px;
-  border-radius: 12px;
-  margin-top: 10px;
-  color: #5a1a1a;
-  font-weight: bold;
-  text-align: center;
-}
-
-.distance-note {
-  font-size: 14px;
-  color: #8b2c2c;
-  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
 /* THANK YOU POPUP */
@@ -391,29 +133,13 @@ body {
   cursor: pointer;
 }
 
-/* Mobile friendly inputs */
-#contact input, #contact select, #contact textarea, #contact button {
-  width: 100%;
-  margin-bottom: 15px;
-  font-size: 16px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  #hero h1 { font-size: 36px; }
+  #hero p { font-size: 16px; }
+  .hero-button, .email-button { width: 100%; padding: 15px 0; }
 }
 
-.hero-button {
-  background: #ff4d6d;
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  font-size: 18px;
-  border-radius: 30px;
-  cursor: pointer;
-  width: 100%;
-  max-width: 300px;
-  display: block;
-  margin: 0 auto;
-}
 
 
 
