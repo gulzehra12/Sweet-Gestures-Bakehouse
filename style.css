@@ -220,6 +220,61 @@ h1, h2 {
   color: #ff4d6d;
 }
 
+  #contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+.facebook-btn {
+  background: #1877F2; /* Facebook blue */
+}
+
+.facebook-btn:hover {
+  background: #145dbf;
+}
+
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.contact-btn {
+  background: #ff4d6d;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+  #map-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+
+
 
 
 
