@@ -259,3 +259,64 @@ body {
   }
 }
 
+/* =====================
+   POPUP STYLES
+===================== */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 182, 193, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.3s ease;
+}
+
+.popup-box h2 {
+  color: #ff4d6d;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.popup-box p {
+  color: #5a1a1a;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.popup-box button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
