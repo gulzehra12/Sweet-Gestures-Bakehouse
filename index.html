@@ -83,6 +83,10 @@
     <!-- Pickup Method -->
    <label>Order Method</label>
    <select name="Order Method" required>
+     <div id="deliveryFee" class="delivery-fee">
+  🚗 Delivery Fee: <strong>$15</strong> (within 3 miles)
+</div>
+
      <div id="deliveryAddress" style="display:none;">
   <input
     type="text"
@@ -94,8 +98,6 @@
      <option value="Local Pickup">Local Pickup</option>
      <option value="Delivery (within 3 miles)">Delivery (within 3 miles)</option>
   </select>
-
-
 
     <!-- FormSubmit Settings -->
     <input type="hidden" name="_subject" value="🧁 New Bakery Order">
