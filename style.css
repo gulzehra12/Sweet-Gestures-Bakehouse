@@ -331,4 +331,27 @@ body {
   text-align: center;
 }
 
+.distance-note {
+  font-size: 14px;
+  color: #8b2c2c;
+  margin-top: 6px;
+}
+
+.delivery-mascot {
+  width: 140px;
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+  z-index: 999;
+  animation: floatMascot 3s ease-in-out infinite;
+}
+
+@keyframes floatMascot {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+
 
