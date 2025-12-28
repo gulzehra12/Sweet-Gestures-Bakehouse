@@ -167,19 +167,28 @@ orderForm.addEventListener("submit", function(e) {
   text-align: center;
 }
 
-const form = document.getElementById("orderForm");
-const popup = document.getElementById("thankYouPopup");
+function handleSubmit(e) {
+  e.preventDefault(); // STOP page redirect
 
-form.addEventListener("submit", () => {
-  setTimeout(() => {
+  const form = e.target;
+  const popup = document.getElementById("thankYouPopup");
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(() => {
     popup.style.display = "flex";
     form.reset();
-  }, 500);
-});
+  }).catch(() => {
+    alert("Something went wrong. Please try again.");
+  });
+}
 
 function closePopup() {
-  popup.style.display = "none";
+  document.getElementById("thankYouPopup").style.display = "none";
 }
+
 
 // ================= GALLERY LIGHTBOX =================
 const images = document.querySelectorAll(".gallery-grid img");
