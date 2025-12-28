@@ -18,23 +18,6 @@ function orderNow() {
   }
 }
 
-
-/* ============================
-   ORDER FORM HANDLING
-============================ */
-const form = document.querySelector("form");
-
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    alert("Thank you! 🧁 We will get back to you.");
-
-    // Clear form
-    form.reset();
-  });
-}
-
 /* ============================
    PREVENT DOUBLE TAP ZOOM (iOS)
 ============================ */
@@ -62,7 +45,7 @@ if (orderMethod) {
   });
 }
 
-// FORM SUBMIT + THANK YOU POPUP
+//  THANK YOU POPUP
 const form = document.getElementById("orderForm");
 const popup = document.getElementById("thankYouPopup");
 const closeBtn = document.getElementById("closePopup");
@@ -98,8 +81,6 @@ if (closeBtn) {
     popup.style.display = "none";
   });
 }
-
-
 
 // ================= GALLERY LIGHTBOX =================
 const images = document.querySelectorAll(".gallery-grid img");
