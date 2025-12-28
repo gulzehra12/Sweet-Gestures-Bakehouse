@@ -45,42 +45,34 @@ if (orderMethod) {
   });
 }
 
-//  THANK YOU POPUP
+console.log("JS LOADED");
+
 const form = document.getElementById("orderForm");
 const popup = document.getElementById("thankYouPopup");
 const closeBtn = document.getElementById("closePopup");
 
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // ⛔ STOP REDIRECT
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // STOP redirect
 
-    fetch("https://formsubmit.co/ajax/sweetgesturesbakehouse@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        name: form.querySelector('[name="Name"]').value,
-        email: form.querySelector('[name="Email"]').value,
-        method: orderMethod.value,
-        address: form.querySelector('[name="Delivery Address"]')?.value || "",
-        message: form.querySelector('[name="Message"]').value,
-      }),
-    }).then(() => {
-      popup.style.display = "flex"; // ✅ SHOW POPUP
-      form.reset();
-      deliveryAddress.style.display = "none";
-    });
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      "Accept": "application/json"
+    }
+  }).then(() => {
+    popup.style.display = "flex";
+    form.reset();
+  }).catch(() => {
+    alert("Something went wrong. Please try again.");
   });
-}
+});
 
-// CLOSE POPUP
-if (closeBtn) {
-  closeBtn.addEventListener("click", () => {
-    popup.style.display = "none";
-  });
-}
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+
 
 // ================= GALLERY LIGHTBOX =================
 const images = document.querySelectorAll(".gallery-grid img");
