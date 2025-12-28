@@ -83,13 +83,29 @@
 <section id="contact">
   <h2>Tell Us What You Want 🧁</h2>
 
-    <form id="orderForm" action="https://formsubmit.co/sweetgesturesbakehouse@gmail.com" method="POST">
-    <input type="text" name="Name" placeholder="Your Name" required>
-    <input type="email" name="Email" placeholder="Your Email" required>
-    <textarea name="Message" placeholder="Your order details..." rows="4"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <form
+  id="orderForm"
+  action="https://formsubmit.co/ajax/sweetgesturesbakehouse@gmail.com"
+  method="POST">
+  <input type="text" name="Name" placeholder="Your Name" required>
+
+  <input type="email" name="Email" placeholder="Your Email" required>
+
+  <textarea
+    name="Message"
+    placeholder="Your order details..."
+    rows="4"
+    required
+  ></textarea>
+
+  <!-- REQUIRED hidden fields -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="New Bakery Order 🍰">
+
+  <button type="submit">Send Message</button>
+</form>
+
 
 <!-- ================= THANK YOU POPUP ================= -->
 <div id="thankYouPopup" style="display:none;">
