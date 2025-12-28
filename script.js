@@ -213,6 +213,16 @@ lightbox.addEventListener("click", e => {
   }
 });
 
+<!-- THANK YOU POPUP -->
+<div id="thankYouPopup" class="thank-you-popup">
+  <div class="thank-you-box">
+    <h2>Thank you! 🧁</h2>
+    <p>Your order/message has been sent.<br>We’ll get back to you soon 💕</p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+
 
 
 
