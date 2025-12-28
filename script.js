@@ -1,13 +1,3 @@
-// Show sticky button after scrolling 300px
-const stickyBtn = document.querySelector('.sticky-order-btn');
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 300) {
-    stickyBtn.style.display = 'block';
-  } else {
-    stickyBtn.style.display = 'none';
-  }
-});
-
 // Smooth scrolling for all links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e){
@@ -27,24 +17,6 @@ function orderNow() {
     orderSection.scrollIntoView({ behavior: "smooth" });
   }
 }
-
-/* ============================
-   STICKY ORDER BUTTON VISIBILITY
-============================ */
-const stickyBtn = document.querySelector(".sticky-order-btn");
-
-window.addEventListener("scroll", () => {
-  if (!stickyBtn) return;
-
-  // Show after scrolling down a bit
-  if (window.scrollY > 300) {
-    stickyBtn.style.opacity = "1";
-    stickyBtn.style.pointerEvents = "auto";
-  } else {
-    stickyBtn.style.opacity = "0";
-    stickyBtn.style.pointerEvents = "none";
-  }
-});
 
 /* ============================
    MASCOT INTERACTION
@@ -181,7 +153,6 @@ function handleSubmit(e) {
 function closePopup() {
   document.getElementById("thankYouPopup").style.display = "none";
 }
-
 
 // ================= GALLERY LIGHTBOX =================
 const images = document.querySelectorAll(".gallery-grid img");
