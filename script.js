@@ -135,15 +135,8 @@ orderMethod.addEventListener("change", () => {
   text-align: center;
 }
   // Show thank-you popup after form submission
-orderForm.addEventListener("submit", function(e) {
-  e.preventDefault();
-
+document.getElementById("thankYouPopup")
   const formData = new FormData(orderForm);
-  fetch(orderForm.action, {
-    method: orderForm.method,
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
     thankYouPopup.style.display = "block";
     orderForm.reset();
   }).catch(error => {
@@ -212,15 +205,6 @@ lightbox.addEventListener("click", e => {
     lightbox.style.display = "none";
   }
 });
-
-<!-- THANK YOU POPUP -->
-<div id="thankYouPopup" class="thank-you-popup">
-  <div class="thank-you-box">
-    <h2>Thank you! 🧁</h2>
-    <p>Your order/message has been sent.<br>We’ll get back to you soon 💕</p>
-    <button onclick="closePopup()">Close</button>
-  </div>
-</div>
 
 
 
